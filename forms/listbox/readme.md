@@ -1,4 +1,4 @@
-Manipulando combobox
+Manipulando listbox (select multiple)
 ===
 
 Exemplo super básico que demonstra como receber/carregar o controle
