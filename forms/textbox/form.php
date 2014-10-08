@@ -25,7 +25,7 @@ $text = "algum texto";
             <fieldset>
                 <legend>Your Contact Details</legend>
                 <p>
-                    <label for="author">Name: <em class="required">(Required)/em></label>
+                    <label for="author">Name: <em class="required">(Required)</em></label>
                     <input name="author" id="author" type="text" value="<?php echo $author; ?>" />
                 </p>
 
