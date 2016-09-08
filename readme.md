@@ -1,10 +1,14 @@
-Exemplos de códigos em PHP
+Coleção de códigos em PHP
 ===
 
-Coleção de códigos em PHP.
+Quer contribuir? Fique à vontade.
 
-1. [textbox/](textbox/)
-2. [checkbox/](checkbox/)
-3. [radio/](radio/)
-4. [combobox/](combobox/)
-5. [listbox/](listbox/)
+Você pode mandar o seu script ou fazer uma nova versão de algum exemplo já existente.
+
+- [textbox/](textbox/)
+- [checkbox/](checkbox/)
+- [radio/](radio/)
+- [combobox/](combobox/)
+- [listbox/](listbox/)
+
+[www.devfuria.com.br](http://www.devfuria.com.br/ "www.devfuria.com.br")
