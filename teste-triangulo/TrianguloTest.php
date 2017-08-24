@@ -9,8 +9,8 @@ class TrianguloTest extends \PHPUnit\Framework\TestCase {
         $objeto->a = 3;
         $objeto->b = 4;
         $objeto->c = 5;
-        
-        $this->assertEquals(1, $objeto->validarForma());
+
+        $this->assertEquals(true, $objeto->validarForma());
     }
 
 }
