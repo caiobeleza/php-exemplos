@@ -3,20 +3,25 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="home.php#">Home</a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="page1/">Page1 <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="page2/">Page2</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="page3/">Page3</a>
-      </li>
+
+      <?php
+        $menus = [
+          'page1.php' => 'Page 1',
+          'page2.php' => 'Page 2',
+          'page3.php' => 'Page 3'
+        ];
+      ?>
+
+      <?php foreach($menus as $key => $value): ?>
+          <li class="nav-item <?php echo ($menu_atual == $key) ? 'active' : '' ?>">
+            <a class="nav-link" href="<?php echo $key ?>"><?php echo $value ?></a>
+          </li>
+      <?php endforeach; ?>
+
     </ul>
   </div>
 </nav>
-

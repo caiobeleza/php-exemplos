@@ -2,8 +2,8 @@
 
 $content  = '';
 $content .= '<div class="container">';
-$content .= '<h1>Página 1</h1>';
-$content .= '<p>este é o conteúdo da página 1</p>';
+$content .= '<h1>Home</h1>';
+$content .= '<p>este é o conteúdo da home</p>';
 $content .= '</div>';
 
 $menu_atual = basename(__FILE__);

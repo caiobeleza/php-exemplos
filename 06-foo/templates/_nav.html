@@ -3,20 +3,25 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="../modulo/home.php#">Home</a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
-        <a class="nav-link" href="../modulo1/page1.php">Page1</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../modulo2/page2.php">Page2</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="../modulo3/page3.php">Page3</a>
-      </li>
+
+      {%
+        set menus = [
+          {'href': '../modulo1/index.php', 'label': 'Page 1'},
+          {'href': '../modulo2/index.php', 'label': 'Page 2'},
+          {'href': '../modulo3/index.php', 'label': 'Page 3'}
+        ]
+      %}
+
+      {% for menu in menus %}
+          <li class="nav-item {% if menu_atual in menu.href %}active{% endif %}">
+            <a class="nav-link" href="{{ menu.href }}">{{ menu.label }}</a>
+          </li>
+      {% endfor %}
+
     </ul>
   </div>
 </nav>
-

@@ -4,7 +4,10 @@
         <?php require __DIR__ . "/includes/head.php" ?>
     </head>
     <body>
-        <?php require __DIR__ . "/includes/nav.php" ?>
+        <?php
+        $menu_atual = basename(__FILE__);
+        require "includes/nav.php";
+        ?>
 
         <div class="container">
             <h1>Página 2</h1>

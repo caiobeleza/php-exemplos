@@ -10,8 +10,8 @@
         ?>
 
         <div class="container">
-            <h1>Página 3</h1>
-            <p>este é o conteúdo da página 3</p>
+            <h1>Home</h1>
+            <p>este é o conteúdo da home</p>
         </div>
 
         <?php require __DIR__ . "/includes/footer.php" ?>
