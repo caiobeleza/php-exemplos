@@ -3,5 +3,5 @@
 
 <title>PHP • TodoMVC</title>
         
-<link href="../assets/css/base.css" rel="stylesheet">
-<link href="../assets/css/index.css" rel="stylesheet">
+<link href=<?php echo $app->abs_url . "/assets/css/base.css" ?> rel="stylesheet">
+<link href=<?php echo $app->abs_url . "/assets/css/index.css" ?> rel="stylesheet">

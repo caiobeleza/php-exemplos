@@ -1,10 +1,11 @@
+<?php require "../../boot.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php require "_includes/header.php"; ?>
+        <?php require $app->abs_path . "/app/_includes/header.php"; ?>
     </head>
     <body class="learn-bar">
-        <?php require "_includes/learn.php"; ?>        
+        <?php require $app->abs_path . "/app/_includes/learn.php"; ?>         
 
         <section class="todoapp">
             <header class="header">
@@ -14,25 +15,29 @@
             <section class="main">
                 <input class="toggle-all" id="toggle-all" type="checkbox">
                 <label for="toggle-all">Mark all as complete</label>
-                <ul class="todo-list"><li>
+                <ul class="todo-list">
+                    <li class="completed">
                         <div class="view">
-                            <input class="toggle" type="checkbox">
+                            <input class="toggle" checked="" type="checkbox">
                             <label>123</label>
                             <button class="destroy"></button>
                         </div>
-                    </li><li>
+                    </li>
+                    <li class="completed">
                         <div class="view">
-                            <input class="toggle" type="checkbox">
+                            <input class="toggle" checked="" type="checkbox">
                             <label>456</label>
                             <button class="destroy"></button>
                         </div>
-                    </li><li>
+                    </li>
+                    <li class="completed">
                         <div class="view">
-                            <input class="toggle" type="checkbox">
+                            <input class="toggle"checked="" type="checkbox">
                             <label>789</label>
                             <button class="destroy"></button>
                         </div>
-                    </li><li class="completed">
+                    </li>
+                    <li class="completed">
                         <div class="view">
                             <input class="toggle" checked="" type="checkbox">
                             <label>9</label>
