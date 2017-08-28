@@ -13,7 +13,7 @@
                 <input class="new-todo" placeholder="What needs to be done?" autofocus>
             </header>
             <section class="main"></section>
-        </section>  
+            </section>
 
     </body>
 </html>

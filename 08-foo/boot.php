@@ -1,5 +1,8 @@
 <?php
 
+
+session_start();
+
 $app = new StdClass();
 
 $app->abs_path = __DIR__;
