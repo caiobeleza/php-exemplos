@@ -12,6 +12,7 @@
                 <input class="new-todo" placeholder="What needs to be done?" autofocus name="todo-descricao" id="txt-adicionar">
             </header>
             <section class="main">
+                <input class="toggle-all" id="toggle-all" type="checkbox">
                 <label for="toggle-all">Mark all as complete</label>
                 <form action="<?php echo $app->abs_url ?>/todo/selecionar.php" id="frm-selecionados" >
                     <ul class="todo-list">
