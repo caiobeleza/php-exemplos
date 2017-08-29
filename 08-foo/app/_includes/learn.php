@@ -14,18 +14,17 @@
             <a href="https://github.com/tastejs/todomvc/tree/gh-pages/examples/typescript-backbone">Source</a>
         </span>
     </header>
-    <hr>
+    <hr />
     <blockquote class="quote speech-bubble">
         <p>Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.</p>
         <footer>
             <a href="http://backbonejs.org">Backbone.js</a>
         </footer>
     </blockquote>
-    <hr>
+    <hr />
     <h4>Official Resources</h4>
     <ul>
-        <li>
-            <a href="http://backbonejs.org/docs/backbone.html">Annotated source code</a> </li>
+        <li> <a href="http://backbonejs.org/docs/backbone.html">Annotated source code</a> </li>
         <li> <a href="http://backbonejs.org/#examples">Applications built with Backbone.js</a> </li>
         <li> <a href="http://backbonejs.org/#faq">FAQ</a> </li>
     </ul>
@@ -35,13 +34,14 @@
         <li> <a href="https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites">Collection of tutorials, blog posts, and example sites</a> </li>
 
     </ul>
-    <h4>Community</h4> <ul>
+    <h4>Community</h4>
+    <ul>
         <li> <a href="http://stackoverflow.com/questions/tagged/backbone.js">Backbone.js on Stack Overflow</a> </li>
         <li> <a href="https://groups.google.com/forum/#!forum/backbonejs">Google Groups mailing list</a> </li>
         <li> <a href="http://twitter.com/documentcloud">Backbone.js on Twitter</a> </li>
     </ul>
     <footer>
-        <hr>
+        <hr />
         <em>If you have other helpful links to share, or find any of the links above no longer work, please
             <a href="https://github.com/tastejs/todomvc/issues">let us know</a>.
         </em>
