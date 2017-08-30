@@ -3,22 +3,14 @@
 require "../boot.php";
 
 
-# desmarcar todos os 'todos'
 foreach($_SESSION['todos'] as $key => $todo) {
-    $_SESSION['todos'][$key]['checked'] = false;
+    if ($todo['checked']) {
+        unset($_SESSION['todos'][$key]);
+    }
 }
-
-# selecionar os indicados
-foreach($_GET['todos'] as $id) {
-    $_SESSION['todos'][$id]['checked'] = true;
-}
-
+    
 //# debug
-//echo "Selecionar:<br>";
-//var_dump($_GET);
-//echo "Selecionados:<br>";
-//var_dump($_SESSION);
-//die();
+//var_dump($_SESSION); die();
 
 #
 #
