@@ -17,16 +17,29 @@
                 <form action="<?php echo $app->abs_url ?>/todo/selecionar.php" id="frm-selecionados" >
                     <ul class="todo-list">
                         <?php foreach ($todos as $key => $todo): ?>
-                            <li class="<?php echo ($_SESSION['todos'][$key]['checked']) ? 'completed': '' ?>" >
-                                <div class="view">
-                                    <input class="toggle" type="checkbox" name="todos[]"
-                                           value="<?php echo $key ?>"
-                                           <?php echo ($_SESSION['todos'][$key]['checked']) ? 'checked' : '' ?>
-                                    >
-                                    <label><a href="?edit=<?php echo $key ?>"><?php echo $todo['label'] ?></a></label>
-                                    <a href="<?php echo $app->abs_url ?>/todo/del.php?id=<?php echo $key ?>" class="destroy"></a>
-                                </div>
-                            </li>
+                        
+                            <?php if ($key != $_GET['edit'] ) : ?>
+                                <li class="<?php echo ($_SESSION['todos'][$key]['checked']) ? 'completed': '' ?>" >
+                                    <div class="view">
+                                        <input class="toggle" type="checkbox" name="todos[]"
+                                               value="<?php echo $key ?>"
+                                               <?php echo ($_SESSION['todos'][$key]['checked']) ? 'checked' : '' ?>
+                                                >
+                                        <label><a href="?edit=<?php echo $key ?>"><?php echo $todo['label'] ?></a></label>
+                                        <a href="<?php echo $app->abs_url ?>/todo/del.php?id=<?php echo $key ?>" class="destroy"></a>
+                                    </div>
+                                </li>
+                            <?php else : ?>
+                                <li class="editing">
+                                        <input type="text" class="edit" 
+                                               value="<?php echo $todo['label'] ?>" 
+                                               data-id="<?php echo $key ?>"
+                                               id="txt-update"
+                                               >
+                                    </form>
+                                </li>                            
+                            <?php endif ?>
+                            
                         <?php endforeach; ?>
                     </ul>
                 </form>
@@ -53,20 +66,24 @@
             obj.onchange = function () {
                 console.log('adicionar');
                 window.location = '<?php echo $app->abs_url ?>/todo/add.php?todo-descricao=' + this.value;
-
             };
 
             // Evento de cada checkbox
             var checks = document.getElementsByName('todos[]');
             checks.forEach(function (obj) {
-                //console.log(obj);
                 obj.onclick = function () {
                     obj_form = document.getElementById('frm-selecionados');
                     obj_form.submit();
                 };
             });
-            //console.log(checks[1]);
-
+            
+            // Evento da textobox quando em modo de edição
+            var obj = document.getElementById('txt-update');
+            obj.onchange = function (event) {
+                var id    = event.target.dataset.id;
+                var value = event.target.value;
+                window.location = '<?php echo $app->abs_url ?>/todo/update.php?id=' + id + '&descricao=' + value;
+            };            
         </script>
 
     </body>

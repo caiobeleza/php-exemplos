@@ -12,6 +12,8 @@ require "page-model.php";
 
 $todos = [];
 
+$_GET['edit'] = (isset($_GET['edit'])) ? $_GET['edit'] : null ;
+
 $_GET['view'] = (isset($_GET['view'])) ? $_GET['view'] : 'all' ;
 
 switch ($_GET['view']) {

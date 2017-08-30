@@ -24,10 +24,6 @@
                         </div>
                     </li>
                     <li class="editing">
-                        <div class="view">
-                            <button>salvar</button>
-                            <button class="destroy"></button>
-                        </div>
                         <input class="edit" value="456">
                     </li>
                     <li>
