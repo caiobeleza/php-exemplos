@@ -23,7 +23,7 @@
                                            value="<?php echo $key ?>"
                                            <?php echo ($_SESSION['todos'][$key]['checked']) ? 'checked' : '' ?>
                                     >
-                                    <label><?php echo $todo['label'] ?></label>
+                                    <label><a href="?edit=<?php echo $key ?>"><?php echo $todo['label'] ?></a></label>
                                     <a href="<?php echo $app->abs_url ?>/todo/del.php?id=<?php echo $key ?>" class="destroy"></a>
                                 </div>
                             </li>
@@ -49,7 +49,7 @@
         <script type="text/javascript">
 
             // Evento onblur da textbox que faz a inserção do 'todo'
-            obj = document.getElementById('txt-adicionar');
+            var obj = document.getElementById('txt-adicionar');
             obj.onchange = function () {
                 console.log('adicionar');
                 window.location = '<?php echo $app->abs_url ?>/todo/add.php?todo-descricao=' + this.value;
@@ -57,7 +57,7 @@
             };
 
             // Evento de cada checkbox
-            checks = document.getElementsByName('todos[]');
+            var checks = document.getElementsByName('todos[]');
             checks.forEach(function (obj) {
                 //console.log(obj);
                 obj.onclick = function () {
@@ -65,7 +65,7 @@
                     obj_form.submit();
                 };
             });
-            //console.log(checks);
+            //console.log(checks[1]);
 
         </script>
 
