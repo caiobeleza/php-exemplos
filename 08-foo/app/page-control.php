@@ -15,9 +15,14 @@ $_GET['edit'] = (isset($_GET['edit'])) ? $_GET['edit'] : null ;
 
 $_GET['view'] = (isset($_GET['view'])) ? $_GET['view'] : 'all' ;
 
-if (isset($_GET['selecionar-todos'])) {
-    selecionar_todos();
+$_GET['toggle-all'] = (isset($_GET['toggle-all'])) ? $_GET['toggle-all'] : null ;
+
+if ($_GET['toggle-all'] == 'on') {
+    toggle_all('on');
+} else if ($_GET['toggle-all'] == 'off') {
+    toggle_all('off');
 }
+
 
 $todos = [];
 switch ($_GET['view']) {
@@ -34,7 +39,7 @@ switch ($_GET['view']) {
         $todos = all();
         break;
 }
-var_dump($_GET); //die();
+// var_dump($_GET); //die();
 
 
 # view

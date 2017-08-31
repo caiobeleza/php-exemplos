@@ -12,7 +12,13 @@
                 <input class="new-todo" placeholder="What needs to be done?" autofocus name="todo-descricao" id="txt-adicionar">
             </header>
             <section class="main">
-                <input class="toggle-all <?php echo isset($_GET['selecionar-todos']) ? 'toggle-all-checked' : '';  ?>" id="toggle-all" type="checkbox">
+
+                <?php if ($_GET['toggle-all'] == 'on'): ?>
+                    <input class="toggle-all toggle-all-checked" id="toggle-all" type="checkbox" value="off" />
+                <?php else: ?>
+                    <input class="toggle-all" id="toggle-all" type="checkbox" value="on" />
+                <?php endif; ?>
+
                 <label for="toggle-all">Mark all as complete</label>
                 <form action="<?php echo $app->abs_url ?>/todo/selecionar.php" id="frm-selecionados" >
                     <ul class="todo-list">
@@ -78,16 +84,18 @@
             });
 
             // Evento da textobox quando em modo de edição
-//            var obj = document.getElementById('txt-update');
-//            obj.onchange = function (event) {
-//                var id    = event.target.dataset.id;
-//                var value = event.target.value;
-//                window.location = '<?php echo $app->abs_url ?>/todo/update.php?id=' + id + '&descricao=' + value;
-//            };
+            var obj = document.getElementById('txt-update');
+            if (obj) {
+                obj.onchange = function (event) {
+                    var id    = event.target.dataset.id;
+                    var value = event.target.value;
+                    window.location = '<?php echo $app->abs_url ?>/todo/update.php?id=' + id + '&descricao=' + value;
+                };
+            }
 
             var obj = document.getElementById('toggle-all');
-            obj.onclick = function () {
-                window.location = '?selecionar-todos';
+            obj.onclick = function (event) {
+                window.location = '?toggle-all=' + event.target.value;
             };
         </script>
 

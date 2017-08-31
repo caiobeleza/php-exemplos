@@ -43,9 +43,13 @@ function completed() {
 #
 #
 #
-function selecionar_todos() {
+function toggle_all($onoff) {
     foreach($_SESSION['todos'] as $key => $todo) {
-        $_SESSION['todos'][$key]['checked'] = true;
+        if ($onoff == 'on') {
+            $_SESSION['todos'][$key]['checked'] = true;
+        } else {
+            $_SESSION['todos'][$key]['checked'] = false;
+        }
     }
     return true;
 }
