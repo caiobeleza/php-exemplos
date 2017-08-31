@@ -12,12 +12,12 @@
                 <input class="new-todo" placeholder="What needs to be done?" autofocus name="todo-descricao" id="txt-adicionar">
             </header>
             <section class="main">
-                <input class="toggle-all" id="toggle-all" type="checkbox">
+                <input class="toggle-all <?php echo isset($_GET['selecionar-todos']) ? 'toggle-all-checked' : '';  ?>" id="toggle-all" type="checkbox">
                 <label for="toggle-all">Mark all as complete</label>
                 <form action="<?php echo $app->abs_url ?>/todo/selecionar.php" id="frm-selecionados" >
                     <ul class="todo-list">
                         <?php foreach ($todos as $key => $todo): ?>
-                        
+
                             <?php if ($key != $_GET['edit'] ) : ?>
                                 <li class="<?php echo ($_SESSION['todos'][$key]['checked']) ? 'completed': '' ?>" >
                                     <div class="view">
@@ -31,15 +31,15 @@
                                 </li>
                             <?php else : ?>
                                 <li class="editing">
-                                        <input type="text" class="edit" 
-                                               value="<?php echo $todo['label'] ?>" 
+                                        <input type="text" class="edit"
+                                               value="<?php echo $todo['label'] ?>"
                                                data-id="<?php echo $key ?>"
                                                id="txt-update"
                                                >
                                     </form>
-                                </li>                            
+                                </li>
                             <?php endif ?>
-                            
+
                         <?php endforeach; ?>
                     </ul>
                 </form>
@@ -76,19 +76,19 @@
                     obj_form.submit();
                 };
             });
-            
+
             // Evento da textobox quando em modo de edição
 //            var obj = document.getElementById('txt-update');
 //            obj.onchange = function (event) {
 //                var id    = event.target.dataset.id;
 //                var value = event.target.value;
 //                window.location = '<?php echo $app->abs_url ?>/todo/update.php?id=' + id + '&descricao=' + value;
-//            }; 
-            
+//            };
+
             var obj = document.getElementById('toggle-all');
             obj.onclick = function () {
                 window.location = '?selecionar-todos';
-            };            
+            };
         </script>
 
     </body>

@@ -129,6 +129,7 @@ label[for='toggle-all'] {
 	height: 34px;
 	text-align: center;
 	border: none; /* Mobile Safari */
+	color: #e6e6e6; /* enxerto devfuria */
 }
 
 .toggle-all:before {
@@ -138,7 +139,11 @@ label[for='toggle-all'] {
 	padding: 10px 27px 10px 27px;
 }
 
+/*
+enxerto devfuria
 .toggle-all:checked:before {
+*/
+.toggle-all-checked {
 	color: #737373;
 }
 
@@ -206,10 +211,10 @@ label[for='toggle-all'] {
 	transition: color 0.4s;
 }
 
-/* encherto devfuria */
+/* enxerto devfuria */
 a {
     text-decoration: none;
-    color: inherit;    
+    color: inherit;
 }
 
 .todo-list li.completed label {
@@ -225,7 +230,7 @@ a {
 	bottom: 0;
 	width: 40px;
 	height: 40px;
-	margin: 20px 0; /* encherto devfuria */
+	margin: 20px 0; /* enxerto devfuria */
 	font-size: 30px;
 	color: #cc9a9a;
 	margin-bottom: 11px;

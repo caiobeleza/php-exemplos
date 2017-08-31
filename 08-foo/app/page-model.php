@@ -31,11 +31,21 @@ function active() {
 #
 #
 function completed() {
-    $active = [];
+    $completed = [];
     foreach($_SESSION['todos'] as $key => $todo) {
         if ($todo['checked']) {
-            $active[$key] = $todo;
+            $completed[$key] = $todo;
         }
     }
-    return $active;
+    return $completed;
+}
+
+#
+#
+#
+function selecionar_todos() {
+    foreach($_SESSION['todos'] as $key => $todo) {
+        $_SESSION['todos'][$key]['checked'] = true;
+    }
+    return true;
 }

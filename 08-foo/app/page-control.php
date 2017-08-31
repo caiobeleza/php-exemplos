@@ -9,13 +9,17 @@ require "../boot.php";
 # model
 require "page-model.php";
 
-
-$todos = [];
+$_SESSION['todos'] = (isset($_SESSION['todos'])) ? $_SESSION['todos'] : [] ;
 
 $_GET['edit'] = (isset($_GET['edit'])) ? $_GET['edit'] : null ;
 
 $_GET['view'] = (isset($_GET['view'])) ? $_GET['view'] : 'all' ;
 
+if (isset($_GET['selecionar-todos'])) {
+    selecionar_todos();
+}
+
+$todos = [];
 switch ($_GET['view']) {
     case 'active':
         //var_dump('active');
@@ -30,7 +34,7 @@ switch ($_GET['view']) {
         $todos = all();
         break;
 }
-//var_dump($todos); die();
+var_dump($_GET); //die();
 
 
 # view
