@@ -1,0 +1,35 @@
+{% extends "layout-padrao.html" %}
+
+{% block nav %}
+    <aside class="learn">
+        <header>
+            <h3>Design</h3>
+            <span class="source-links">
+
+                <h5>Estado Inicial</h5>
+                <a href="{{ base_url() }}/design/example-1">Example 1</a>
+
+                <h5>Uma inserção</h5>
+                <a href="{{ base_url() }}/design/example-2">Example 2</a>
+
+                <h5>Editando</h5>
+                <a href="{{ base_url() }}/design/example-3">Example 3</a>
+
+                <h5>Um desmarcado</h5>
+                <a href="{{ base_url() }}/design/example-4">Example 4</a>
+
+                <h5>Todos desmarcados</h5>
+                <a href="{{ base_url() }}/design/example-5">Example 5</a>
+            </span>
+        </header>
+        <hr />
+        <blockquote class="quote speech-bubble">
+            <p>Aqui é só para você testar o design da aplicação. Veja através dos exemplos como devemos, com a linguágem PHP, fazer as telas funcionarem.</p>
+            <footer>
+                <a href="{{ base_url() }}">Home</a>
+            </footer>
+        </blockquote>
+    </aside>
+{% endblock %}
+
+{% block wraper %}{% endblock %}
