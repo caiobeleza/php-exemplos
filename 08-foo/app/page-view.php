@@ -78,11 +78,16 @@
             });
             
             // Evento da textobox quando em modo de edição
-            var obj = document.getElementById('txt-update');
-            obj.onchange = function (event) {
-                var id    = event.target.dataset.id;
-                var value = event.target.value;
-                window.location = '<?php echo $app->abs_url ?>/todo/update.php?id=' + id + '&descricao=' + value;
+//            var obj = document.getElementById('txt-update');
+//            obj.onchange = function (event) {
+//                var id    = event.target.dataset.id;
+//                var value = event.target.value;
+//                window.location = '<?php echo $app->abs_url ?>/todo/update.php?id=' + id + '&descricao=' + value;
+//            }; 
+            
+            var obj = document.getElementById('toggle-all');
+            obj.onclick = function () {
+                window.location = '?selecionar-todos';
             };            
         </script>
 
