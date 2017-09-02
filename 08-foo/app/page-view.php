@@ -42,7 +42,6 @@
                                                data-id="<?php echo $key ?>"
                                                id="txt-update"
                                                >
-                                    </form>
                                 </li>
                             <?php endif ?>
 

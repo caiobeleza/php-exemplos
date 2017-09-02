@@ -35,9 +35,16 @@ require  "twig.php";
 
 
 #
+# Models
+#
+require 'models/todo.php';
+
+
+#
 # Controllers
 #
 require 'controllers/default.php';
+require 'controllers/todo.php';
 require 'controllers/design.php';
 
 $app->run();
