@@ -76,7 +76,9 @@ $app->get('/selecionar/{id}', function ($request, $response, $args) {
 
 });
 
-
+#
+# index/clear-completed/
+#
 $app->get('/clear-completed/', function ($request, $response, $args) {
     clear_completed();
     return $response->withRedirect($request->getUri()->getBasePath());

@@ -5,7 +5,6 @@
 #
 $_SESSION['todos'] = (isset($_SESSION['todos'])) ? $_SESSION['todos'] : [] ;    
 
-
 #
 # Retorna um novo 'todo'
 #
@@ -17,14 +16,12 @@ function get_new($description) {
     ];    
 }
 
-
 #
 # Retorna um novo id
 #
 function get_new_id() {
     return count($_SESSION['todos']) + 1;
 }
-
 
 #
 # C - insert
@@ -33,7 +30,6 @@ function insert($todo) {
     $id = $todo['id'];
     $_SESSION['todos'][$id] = $todo;
 }
-
 
 #
 # R - read
@@ -57,7 +53,6 @@ function update($id, $descricao) {
 function delete($id) {
     unset($_SESSION['todos'][$id]);    
 }
-
 
 #
 # Retorna um array de 'todos'
