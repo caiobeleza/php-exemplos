@@ -45,6 +45,5 @@ require 'models/todo.php';
 #
 require 'controllers/default.php';
 require 'controllers/todo.php';
-require 'controllers/design.php';
 
 $app->run();

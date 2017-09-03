@@ -20,7 +20,7 @@
                     {% for todo in todos %}
 
                         {% if todo.id != edit_id %}
-                            <li class="{{ todo.completed ? '' : 'completed' }}" >
+                            <li class="{{ todo.completed ? 'completed' : '' }}" >
                                 <div class="view">
                                     <input {{ todo.completed ? 'checked' : '' }}
                                            class="toggle" type="checkbox" name="todos[]" value="{{ todo.id }}"
