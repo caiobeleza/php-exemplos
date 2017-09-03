@@ -42,7 +42,7 @@ $app->get('/toggle-all', function ($request, $response, $args) {
 $app->get('/[{param}]', function ($request, $response, $args) {
     $edit_id = null;
 
-    # se for numérico, é o id do 'todo'... 
+    # se for numérico, é o id do 'todo'...
     if (is_numeric($request->getAttribute('param'))) {
         $edit_id = $request->getAttribute('param');
     }
@@ -66,12 +66,11 @@ $app->get('/[{param}]', function ($request, $response, $args) {
 
 
 #
-# index/selecionar/id
+# index/toggle/id
 #
-$app->get('/selecionar/{id}', function ($request, $response, $args) {
+$app->get('/toggle/{id}', function ($request, $response, $args) {
 
-    $id = $request->getAttribute('id');
-    toggle($id);
+    toggle($request->getAttribute('id'));
     return $response->withRedirect($request->getUri()->getBasePath());
 
 });

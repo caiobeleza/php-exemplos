@@ -18,7 +18,7 @@
             <label for="toggle-all">Mark all as complete</label>
                 <ul class="todo-list">
                     {% for todo in todos %}
-                    
+
                         {% if todo.id != edit_id %}
                             <li class="{{ state['all-selected'] ? '' : 'completed' }}" >
                                 <div class="view">
@@ -34,7 +34,7 @@
                                 <input type="text" class="edit" value="{{ todo.descr }}" data-id="{{ todo.id }}" id="txt-update" />
                             </li>
                         {% endif %}
-                        
+
                     {% endfor %}
                 </ul>
         </section>
@@ -76,7 +76,7 @@
     var checks = document.getElementsByName('todos[]');
     checks.forEach(function (obj) {
         obj.onclick = function (event) {
-            window.location = "{{ base_url() }}/selecionar/" + event.target.value;
+            window.location = "{{ base_url() }}/toggle/" + event.target.value;
         };
     });
 
