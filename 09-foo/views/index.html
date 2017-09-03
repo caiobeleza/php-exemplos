@@ -20,7 +20,7 @@
                     {% for todo in todos %}
 
                         {% if todo.id != edit_id %}
-                            <li class="{{ state['all-selected'] ? '' : 'completed' }}" >
+                            <li class="{{ todo.completed ? '' : 'completed' }}" >
                                 <div class="view">
                                     <input {{ todo.completed ? 'checked' : '' }}
                                            class="toggle" type="checkbox" name="todos[]" value="{{ todo.id }}"
@@ -48,7 +48,7 @@
                     <li> <a class="{{ state['view'] == "completed" ? 'selected' : '' }}" href="./completed">Completed</a> </li>
                 </ul>
                 {% if sum_completed %}
-                    <a href="{{ base_url() }}/clear-completed/" class="clear-completed">Clear completed</a>
+                    <a href="{{ base_url() }}/todo/clear-completed/" class="clear-completed">Clear completed</a>
                 {% endif %}
             </footer>
         {% endif %}
@@ -62,25 +62,24 @@
     // Evento onblur da textbox que faz a inserção do 'todo'
     var obj = document.getElementById('txt-adicionar');
     obj.onchange = function () {
-        console.log('adicionar');
         window.location = "{{ base_url() }}/todo/insert/" + this.value;
     };
 
     // Evento onclick para selecionar todos ou não
     var obj = document.getElementById('toggle-all');
     obj.onclick = function (event) {
-        window.location = "{{ base_url() }}/toggle-all";
+        window.location = "{{ base_url() }}/todo/toggle-all";
     };
 
     // Evento de cada checkbox
     var checks = document.getElementsByName('todos[]');
     checks.forEach(function (obj) {
         obj.onclick = function (event) {
-            window.location = "{{ base_url() }}/toggle/" + event.target.value;
+            window.location = "{{ base_url() }}/todo/toggle/" + event.target.value;
         };
     });
 
-    // Evento da textobox quando em modo de edição
+    // Evento da textbox quando em modo de edição
     var obj = document.getElementById('txt-update');
     if (obj) {
         obj.onchange = function (event) {

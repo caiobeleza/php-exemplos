@@ -18,25 +18,6 @@ if (!isset($_SESSION['state']['view'])) {
 
 
 #
-# index/toggle-all
-#
-$app->get('/toggle-all', function ($request, $response, $args) {
-
-    # toggle
-    if (  $_SESSION['state']['all-selected']  ) {
-        select_all();
-        $_SESSION['state']['all-selected'] = false; # turn off
-    } else {
-        unselect_all();
-        $_SESSION['state']['all-selected'] = true;  # turn on
-    }
-
-    return $response->withRedirect($request->getUri()->getBasePath());
-
-});
-
-
-#
 # index, index/all, index/active, index/completed
 #
 $app->get('/[{param}]', function ($request, $response, $args) {
@@ -64,21 +45,3 @@ $app->get('/[{param}]', function ($request, $response, $args) {
 
 });
 
-
-#
-# index/toggle/id
-#
-$app->get('/toggle/{id}', function ($request, $response, $args) {
-
-    toggle($request->getAttribute('id'));
-    return $response->withRedirect($request->getUri()->getBasePath());
-
-});
-
-#
-# index/clear-completed/
-#
-$app->get('/clear-completed/', function ($request, $response, $args) {
-    clear_completed();
-    return $response->withRedirect($request->getUri()->getBasePath());
-});
