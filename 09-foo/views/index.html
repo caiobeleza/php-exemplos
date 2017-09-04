@@ -1,4 +1,4 @@
-{% extends "layout-padrao.html" %}
+{% extends "layout.html" %}
 
 {% block wraper %}
     <section class="todoapp">
@@ -10,7 +10,7 @@
         <section class="main">
 
             {% if not state['all-selected'] %}
-                <input id="toggle-all" type="checkbox" value="off" class="toggle-all toggle-all-checked" />
+                <input id="toggle-all" type="checkbox" value="off" class="toggle-all toggle-all-checked" checked=""/>
             {% else  %}
                 <input id="toggle-all" type="checkbox" value="on"  class="toggle-all" />
             {% endif %}

@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>PHP • TodoMVC</title>
-
-        <link href="/devfuria/php-exemplos/09-foo/assets/css/base.css" rel="stylesheet">
-        <link href="/devfuria/php-exemplos/09-foo/assets/css/index.css" rel="stylesheet">
-
+        <?php include("head.html") ?>
     </head>
     <body class="learn-bar">
 
