@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <?php require "inc-head.php" ?>
-    </head>
+        <?php
+        $page_name = "Home";
+        require "inc-head.php"
+        ?>    </head>
     <body>
         <?php
         $menu_atual = basename(__FILE__);

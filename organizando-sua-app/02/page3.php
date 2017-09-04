@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <?php require __DIR__ . "/includes/head.php" ?>
+        <?php
+        $page_name = "Page 3";
+        require __DIR__ . "/includes/head.php"
+        ?>
     </head>
     <body>
         <?php
@@ -10,13 +13,10 @@
         ?>
 
         <div class="container">
-            <h1>Página 2</h1>
-            <p>este é o conteúdo da página 2</p>
+            <h1>Página 3</h1>
+            <p>este é o conteúdo da página 3</p>
         </div>
 
         <?php require __DIR__ . "/includes/footer.php" ?>
     </body>
 </html>
-
-
-
