@@ -47,11 +47,11 @@ $text = "algum texto";
                     <textarea name="text" id="text" cols="20" rows="10"><?php echo $text; ?></textarea>
                 </p>
             </fieldset>
-            
+
             <p>
               <input type="submit" value="Submit!" />
-            </p>            
-            
+            </p>
+
         </form>
     </body>
 </html>
