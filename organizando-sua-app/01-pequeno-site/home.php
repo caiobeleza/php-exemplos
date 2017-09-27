@@ -4,7 +4,8 @@
         <?php
         $page_name = "Home";
         require "inc-head.php"
-        ?>    </head>
+        ?>
+    </head>
     <body>
         <?php
         $menu_atual = basename(__FILE__);

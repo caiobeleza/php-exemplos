@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <?php
-        $page_name = "Page 1";
+        $page_name = "Page 3";
         require "inc-head.php"
         ?>
     </head>

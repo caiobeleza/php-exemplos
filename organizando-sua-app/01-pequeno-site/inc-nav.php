@@ -8,19 +8,19 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
 
-    <?php
-      $menus = [
-        'page1.php' => 'Page 1',
-        'page2.php' => 'Page 2',
-        'page3.php' => 'Page 3'
-      ];
-    ?>
+      <?php
+        $menus = [
+          'page1.php' => 'Page 1',
+          'page2.php' => 'Page 2',
+          'page3.php' => 'Page 3'
+        ];
+      ?>
 
-    <?php foreach($menus as $key => $value): ?>
-      <li class="nav-item <?php echo ($menu_atual == $key) ? 'active' : '' ?>">
-        <a class="nav-link" href="<?php echo $key ?>"><?php echo $value ?></a>
-      </li>
-    <?php endforeach; ?>
+      <?php foreach($menus as $key => $value): ?>
+        <li class="nav-item <?php echo ($menu_atual == $key) ? 'active' : '' ?>">
+          <a class="nav-link" href="<?php echo $key ?>"><?php echo $value ?></a>
+        </li>
+      <?php endforeach; ?>
 
     </ul>
   </div>
