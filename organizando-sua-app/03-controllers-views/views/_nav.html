@@ -17,9 +17,9 @@
       %}
 
       {% for menu in menus %}
-          <li class="nav-item {% if menu_atual == menu.href %}active{% endif %}">
-            <a class="nav-link" href="{{ menu.href }}">{{ menu.label }}</a>
-          </li>
+        <li class="nav-item {% if menu_atual == menu.href %}active{% endif %}">
+          <a class="nav-link" href="{{ menu.href }}">{{ menu.label }}</a>
+        </li>
       {% endfor %}
 
     </ul>
