@@ -1,15 +1,10 @@
 Exemplos de códigos em PHP
 ====
 
-Coleção de códigos em PHP (aqueles que valem alguma coisa).
+Oi Caio, tudo bem?
+Olha só, eu migrei os códigos deste projeto para cá https://github.com/flaviomicheletti/devfuria-php.
+E vc também poderá ver o resultado na web http://www.devfuria.com.br/php/.
 
-Lista (cronológica) dos códigos:
-
-1. [Manipulando os controles text, password e textarea](forms/textbox/)
-2. [Manipulando o controle checkboxe](forms/checkbox/)
-3. [Manipulando o controle radio button](forms/radio/)
-4. [Manipulando o controle combobox](forms/combobox/)
-5. [Manipulando o controle listbox(select multiple)](forms/listbox/)
-
+Abs.
 
 
